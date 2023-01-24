@@ -87,7 +87,7 @@ app.post("/delete", function(req, res) {
     let nameList = req.body.nameList
 
     if(nameList === "Today"){
-        if(stateCheckbox){
+        if(nameItem){
             Item.findOneAndRemove(nameItem.name, function(err) {
                 if(err){
                     console.log("Erreur")
